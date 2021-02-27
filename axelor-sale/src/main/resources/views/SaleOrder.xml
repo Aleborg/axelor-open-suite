@@ -218,7 +218,7 @@
 	      <field name="saleOrderTypeSelect" colSpan="3" css="label-bold bold" showTitle="false" readonlyIf="statusSelect >= 2" if="__config__.app.isApp('supplychain') &amp;&amp; __config__.app.getApp('supplychain').getAllowSusbcriptionSaleOrder()" if-module="axelor-supplychain">
 	        <viewer><![CDATA[
 	          <div>
-	            <div class="span7">
+	            <div class="col-md-7">
 	              <h5>
 	                <span class="label label-info">
 	                <span ng-show="record.saleOrderTypeSelect == 1" x-translate>Standard</span>
@@ -231,7 +231,7 @@
 	      <field name="$invoicingState" showTitle="false" readonly="true" showIf="statusSelect >= 3" css="label-bold bold" colSpan="3">
 	        <viewer depends="amountInvoiced,exTaxTotal"><![CDATA[
 	        <div>
-	        <div class="span7">
+	        <div class="col-md-7">
 	          <h5>
 	          <span class="label label-important" ng-show="record.amountInvoiced == 0"  x-translate>Not invoiced</span>
 	          <span class="label label-warning" ng-show="record.amountInvoiced > 0 && $number(record.amountInvoiced) < $number(record.exTaxTotal)" x-translate>Partially invoiced</span>
@@ -244,7 +244,7 @@
 	      <field if="__config__.app.isApp('supplychain')" if-module="axelor-supplychain" showTitle="false" name="deliveryState" showIf="statusSelect >= 3" css="label-bold bold" colSpan="3">
 	        <viewer><![CDATA[
 	        <div>
-	        <div class="span7">
+	        <div class="col-md-7">
 	        <h5>
 	          <span class="label label-important" ng-show="record.deliveryState == 1" x-translate>Not delivered</span>
 	          <span class="label label-warning" ng-show="record.deliveryState == 2" x-translate>Partially delivered</span>
@@ -257,7 +257,7 @@
 	      <field name="availabilityRequestLabel" colSpan="3" css="label-bold bold" showTitle="false" readonly="true" hidden="true">
 	        <viewer><![CDATA[
 	          <div>
-	            <div class="span7">
+	            <div class="col-md-7">
 	              <h5>
 	                <span class="label label-important">
 	                <span x-translate>Availability Request</span>
@@ -758,17 +758,17 @@
         <field name="tradingName"/>
         <field name="stockLocation" if="__config__.app.isApp('supplychain')"/>
 		<template><![CDATA[
-		    <div class="span12">
+		    <div class="col-md-12">
 		    	<strong><span x-translate>Sale order</span> {{ saleOrderSeq }}</strong> <span ng-show="record.externalReference">( {{ externalReference }} )</span>
 		    	<a class="pull-right muted">{{ $fmt('orderDate') }}</a>
 	    	</div>
 			<div>
 			  <div>
-				  <div class="span8">
+				  <div class="col-md-8">
 				    <i class="fa fa-users" aria-hidden="true"></i>
 				  	{{ clientPartner.fullName }}
 				  </div>
-					<div class="span4 pull-right">
+					<div class="col-md-4 pull-right">
 						<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						<span ng-show="record.statusSelect == 1" x-translate>Draft quotation</span>
 						<span ng-show="record.statusSelect == 2" x-translate>Finalized quotation</span>
@@ -778,7 +778,7 @@
 					</div>
 			  </div>
 			  <div>
-				  <div class="span6">
+				  <div class="col-md-6">
 				  	<h5>
 						<span class="label label-important"  ng-show="record.amountInvoiced == 0"  x-translate>Not invoiced</span>
 						<span class="label label-warning" ng-show="record.amountInvoiced > 0 && $number(record.amountInvoiced) < $number(record.exTaxTotal)" x-translate>Partially invoiced</span>
@@ -793,13 +793,13 @@
                         <span class="label label-important" ng-show="record.orderBeingEdited" x-translate>Order being edited</span>
                     </h5>
 				  </div>
-				  <div class="span6">
+				  <div class="col-md-6">
 				    <span><strong><span x-translate>WT</span> : {{ $fmt('exTaxTotal') }} {{ currency.symbol }}</strong><br/>
 				    <strong><span x-translate>ATI</span> : {{ $fmt('inTaxTotal') }} {{ currency.symbol }}</strong></span>
 				  </div>
 			  </div>
 			</div>
-			<div class="span12" style="margin-left:0px;">
+			<div class="col-md-12" style="margin-left:0px;">
 			  <span class="label label-default" ng-show="!record.tradingName.name" style="background-color: #2185D0;" x-translate>{{ company.name }}</span>
 			  <span class="label label-default" ng-show="record.tradingName.name" style="background-color: #2185D0;" x-translate>{{ tradingName.name }}</span>
 			  <span class="label label-default pull-right muted" style="background-color: #2185D0; padding: 5px;" x-translate>{{ stockLocation.name }}</span>
@@ -832,17 +832,17 @@
 		<field name="tradingName"/>
 		<field name="stockLocation" if="__config__.app.isApp('supplychain')"/>
 		<template><![CDATA[
-		    <div class="span12">
+		    <div class="col-md-12">
 		    	<strong><span x-translate>Sale quotation</span> {{ saleOrderSeq }}</strong> <span ng-show="record.externalReference">( {{ externalReference }} )</span>
 		    	<a class="pull-right muted">{{ $fmt('orderDate') }}</a>
 	    	</div>
 			<div>
 			  <div>
-				  <div class="span8">
+				  <div class="col-md-8">
 				    <i class="fa fa-users" aria-hidden="true"></i>
 				  	{{ clientPartner.fullName }}
 				  </div>
-					<div class="span4 pull-right">
+					<div class="col-md-4 pull-right">
 						<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						<span ng-show="record.statusSelect == 1" x-translate>Draft quotation</span>
 						<span ng-show="record.statusSelect == 2" x-translate>Finalized quotation</span>
@@ -852,7 +852,7 @@
 					</div>
 			  </div>
 			  <div>
-				  <div class="span6">
+				  <div class="col-md-6">
 				  	<h5>
 						<span class="label label-important"  ng-show="record.amountInvoiced == 0"  x-translate>Not invoiced</span>
 						<span class="label label-warning" ng-show="record.amountInvoiced > 0 && $number(record.amountInvoiced) < $number(record.exTaxTotal)" x-translate>Partially invoiced</span>
@@ -864,13 +864,13 @@
 						<span class="label label-success" ng-show="record.deliveryState > 0 && record.deliveryState == 3" x-translate>Delivered</span>
 					</h5>
 				  </div>
-				  <div class="span6">
+				  <div class="col-md-6">
 				    <span><strong><span x-translate>WT</span> : {{ $fmt('exTaxTotal') }} {{ currency.symbol }}</strong><br/>
 				    <strong><span x-translate>ATI</span> : {{ $fmt('inTaxTotal') }} {{ currency.symbol }}</strong></span>
 				  </div>
 			  </div>
 			</div>
-			<div class="span12" style="margin-left:0px;">
+			<div class="col-md-12" style="margin-left:0px;">
 			  <span class="label label-default" ng-show="!record.tradingName.name" style="background-color: #2185D0;" x-translate>{{ company.name }}</span>
 			  <span class="label label-default" ng-show="record.tradingName.name" style="background-color: #2185D0;" x-translate>{{ tradingName.name }}</span>
 			  <span class="label label-default pull-right muted" style="background-color: #2185D0; padding: 5px;" x-translate>{{ stockLocation.name }}</span>

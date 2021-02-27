@@ -590,17 +590,17 @@
 		<field name="mainAddress"/>
 		<template><![CDATA[
 			<div>
-				<div class="span12"><strong>{{fullName}}</strong></div>
+				<div class="col-md-12"><strong>{{fullName}}</strong></div>
 		 	</div>
 			<div>
-			  <div class="span4 card-image" style="width: 128px; height: 64px;">
+			  <div class="col-md-4 card-image" style="width: 128px; height: 64px;">
                 <img ng-show="picture" ng-src="{{$image('picture', 'content')}}" style="width: 100%; height: 100%; object-fit: contain;"/>
                 <img ng-show="!picture && partnerTypeSelect != 2" src="img/company-default.jpg" />
                 <img ng-show="!picture && partnerTypeSelect == 2 && titleSelect == 1" src="img/partner-m-default.png" />
                 <img ng-show="!picture && partnerTypeSelect == 2 && titleSelect == 2" src="img/partner-w-default.png" />
                 <img ng-show="!picture && partnerTypeSelect == 2 && (titleSelect > 2 || !titleSelect)" src="img/partner-default.png" />
 			  </div>
-			  <div class="span8">
+			  <div class="col-md-8">
 			  	{{registrationCode}}
 			  	<address>
 			  	{{mainAddress.fullName}}
@@ -633,16 +633,16 @@
 		<field name="titleSelect" />
 		<template><![CDATA[
 			<div>
-				<div class="span12"><strong>{{fullName}}</strong></div>
+				<div class="col-md-12"><strong>{{fullName}}</strong></div>
 		 	</div>
 			<div>
-			  <div class="span4 card-image" style="width: 128px; height: 64px;">
+			  <div class="col-md-4 card-image" style="width: 128px; height: 64px;">
 			    <img ng-show="picture" ng-src="{{$image('picture', 'content')}}"  style="width: 100%; height: 100%; object-fit: contain;"/>
                 <img ng-show="!picture && titleSelect == 1" src="img/partner-m-default.png" />
                 <img ng-show="!picture && titleSelect == 2" src="img/partner-w-default.png" />
                 <img ng-show="!picture && (titleSelect > 2 || !titleSelect)" src="img/partner-default.png" />
 			  </div>
-			  <div class="span8">
+			  <div class="col-md-8">
 			    <span>{{mainAddress.fullName}}<br/>
 			    <span ng-if="fixedPhone"><i class='fa fa-phone fa-flip-horizontal'/>  {{fixedPhone}}<br/></span>
 			    <span  ng-if="mobilePhone"><i class='fa fa-mobile' style="margin-right:9px;"/>{{mobilePhone}}<br/></span>

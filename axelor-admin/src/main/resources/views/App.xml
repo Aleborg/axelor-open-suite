@@ -67,13 +67,13 @@
 		<field name="sequence"/>
 		<template><![CDATA[
 			<div>
-			  <div class="span4 card-image">
+			  <div class="col-md-4 card-image">
 			    <img ng-src="{{$image('image', 'content')}}" />
 			  </div>
-			  <div class="span8">
+			  <div class="col-md-8">
 				 <strong x-translate>{{$fmt('name')}}</strong>
 			  </div>
-			  <div class="span12">
+			  <div class="col-md-12">
 				<a class="btn btn-small btn-info pull-right" href="" ng-show="!active" ui-action-click="action-app-alert-install,action-app-method-install-app" x-translate>Install</a>
 				<a class="btn btn-small btn-success pull-right" href="" ng-show="active" ui-action-click="com.axelor.apps.base.web.AppController:configure" x-translate>Configure</a>
 				<a class="btn btn-small btn-danger pull-right" href="" ng-show="active" ui-action-click="action-app-alert-un-install,action-app-method-uninstall-app" x-translate>Uninstall</a>

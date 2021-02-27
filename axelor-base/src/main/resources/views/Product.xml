@@ -330,20 +330,20 @@
 		<field name="internalDescription"/>
 		<field name="configurator.id"/>
 		<template><![CDATA[
-		    <div class="span12"><strong>{{fullName}}</strong></div>
+		    <div class="col-md-12"><strong>{{fullName}}</strong></div>
 			<div>
-			  <div class="span4 card-image" style="width: 128px; height: 64px;">
+			  <div class="col-md-4 card-image" style="width: 128px; height: 64px;">
 			    <img ng-show="picture" ng-src="{{$image('picture', 'content')}}" style="width: 100%; height: 100%; object-fit: contain;"/>
 			    <img ng-show="!picture" src="img/product-default.png" />
 			  </div>
-			  <div class="span8" style="width: 60%;">
+			  <div class="col-md-8" style="width: 60%;">
 			    <span>{{$fmt('salePrice')}} {{saleCurrency.symbol}}<br/>
 			    {{productFamily.name}}<br/>
 			    {{productCategory.name}}</span>
 			  </div>
 			</div>
-			<div class="span12" ng-bind-html="internalDescription"></div>
-			<div class="span12" style="margin-left:0px;">
+			<div class="col-md-12" ng-bind-html="internalDescription"></div>
+			<div class="col-md-12" style="margin-left:0px;">
 	  			<span class="label label-important" ng-show="record.configurator.id" x-translate>Customised</span>
 			</div>
 		]]>

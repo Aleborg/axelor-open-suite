@@ -14,12 +14,12 @@
 		<field name="productFamily" />
 		<field name="productCategory" />
 		<template><![CDATA[
-		    <div class="span12"><strong>{{fullName}}</strong></div>
+		    <div class="col-md-12"><strong>{{fullName}}</strong></div>
 			<div>
-			  <div class="span4 card-image">
+			  <div class="col-md-4 card-image">
 			    <img ng-src="{{$image('picture', 'content')}}" />
 			  </div>
-			  <div class="span8">
+			  <div class="col-md-8">
 			    <span>{{$fmt('salePrice')}} {{saleCurrency.symbol}}<br/>
 			    {{productFamily.name}}<br/>
 			    {{productCategory.name}}</span>

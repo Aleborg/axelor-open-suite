@@ -264,17 +264,17 @@
 		<field name="company"/>
 		<field name="stockLocation" if="__config__.app.isApp('supplychain')"/>
 		<template><![CDATA[
-		    <div class="span12">
+		    <div class="col-md-12">
 		    	<strong><span x-translate>Supplier RFQ/PO</span> {{ purchaseOrderSeq }}</strong> <span ng-show="record.externalReference">( {{ externalReference }} )</span>
 		    	<a class="pull-right muted">{{ $fmt('orderDate') }}</a>
 	    	</div>
 			<div>
 			  <div>
-				  <div class="span8">
+				  <div class="col-md-8">
 				    <i class="fa fa-users" aria-hidden="true"></i>
 				  	{{ supplierPartner.fullName }}
 				  </div>
-					<div class="span4 pull-right">
+					<div class="col-md-4 pull-right">
 						<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						<span ng-show="record.statusSelect == 1" x-translate>Draft</span>
 						<span ng-show="record.statusSelect == 2" x-translate>Requested</span>
@@ -284,7 +284,7 @@
 					</div>
 			  </div>
 			  <div>
-				  <div class="span6">
+				  <div class="col-md-6">
 					  	<h5>
 							<span class="label label-important"  ng-show="record.amountInvoiced == 0"  x-translate>Not invoiced</span>
 							<span class="label label-warning" ng-show="record.amountInvoiced > 0 && $number(record.amountInvoiced) < $number(record.exTaxTotal)" x-translate>Partially invoiced</span>
@@ -296,13 +296,13 @@
 							<span class="label label-success" ng-show="record.receiptState > 0 && record.receiptState == 3" x-translate>Received</span>
 						</h5>
 				  </div>
-				  <div class="span6">
+				  <div class="col-md-6">
 				    <span><strong><span x-translate>WT</span> : {{ $fmt('exTaxTotal') }} {{ currency.symbol }}</strong><br/>
 				    <strong><span x-translate>ATI</span> : {{ $fmt('inTaxTotal') }} {{ currency.symbol }}</strong></span>
 				  </div>
 			  </div>
 			</div>
-			<div class="span12" style="margin-left:0px;">
+			<div class="col-md-12" style="margin-left:0px;">
 			  <span class="label label-default" style="background-color: #2185D0;" x-translate>{{ company.name }}</span>
 			  <span class="label label-default pull-right muted" style="background-color: #2185D0; padding: 5px;" x-translate>{{ stockLocation.name }}</span>
 			</div>
@@ -330,17 +330,17 @@
 		<field name="company"/>
 		<field name="stockLocation" if="__config__.app.isApp('supplychain')"/>
 		<template><![CDATA[
-		    <div class="span12">
+		    <div class="col-md-12">
 		    	<strong><span x-translate>Supplier RFQ/PO</span> {{ purchaseOrderSeq }}</strong> <span ng-show="record.externalReference">( {{ externalReference }} )</span>
 		    	<a class="pull-right muted">{{ $fmt('orderDate') }}</a>
 	    	</div>
 			<div>
 			  <div>
-				  <div class="span8">
+				  <div class="col-md-8">
 				    <i class="fa fa-users" aria-hidden="true"></i>
 				  	{{ supplierPartner.fullName }}
 				  </div>
-					<div class="span4 pull-right">
+					<div class="col-md-4 pull-right">
 						<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						<span ng-show="record.statusSelect == 1" x-translate>Draft</span>
 						<span ng-show="record.statusSelect == 2" x-translate>Requested</span>
@@ -350,7 +350,7 @@
 					</div>
 			  </div>
 			  <div>
-				  <div class="span6">
+				  <div class="col-md-6">
 				  	<h5>
 						<span class="label label-important"  ng-show="record.amountInvoiced == 0"  x-translate>Not invoiced</span>
 					<span class="label label-warning" ng-show="record.amountInvoiced > 0 && $number(record.amountInvoiced) < $number(record.exTaxTotal)" x-translate>Partially invoiced</span>
@@ -362,13 +362,13 @@
 						<span class="label label-success" ng-show="record.receiptState > 0 && record.receiptState == 3" x-translate>Received</span>
 					</h5>
 				  </div>
-				  <div class="span6">
+				  <div class="col-md-6">
 				    <span><strong><span x-translate>WT</span> : {{ $fmt('exTaxTotal') }} {{ currency.symbol }}</strong><br/>
 				    <strong><span x-translate>ATI</span> : {{ $fmt('inTaxTotal') }} {{ currency.symbol }}</strong></span>
 				  </div>
 			  </div>
 			</div>
-			<div class="span12" style="margin-left:0px;">
+			<div class="col-md-12" style="margin-left:0px;">
 			  <span class="label label-default" style="background-color: #2185D0;" x-translate>{{ company.name }}</span>
 			  <span class="label label-default pull-right muted" style="background-color: #2185D0; padding: 5px;" x-translate>{{ stockLocation.name }}</span>
 			</div>
